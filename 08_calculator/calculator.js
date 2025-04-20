@@ -8,19 +8,11 @@ const subtract = function(a, b) {
 };
 
 const sum = function(array) {
-  let s = 0;
-	for (const num of array){
-    s+=num;
-  }
-  return s;
+  return array.reduce((currentTotal, currentItem)=> currentTotal+currentItem, 0);
 };
 
 const multiply = function(array) {
-  let res = 1;
-  for (const num of array){
-    res*=num;
-  }
-  return res;
+  return array.reduce((currentRes, currentNum) => currentRes*currentNum, 1);
 };
 
 const power = function(a, b) {
